@@ -26,6 +26,40 @@ long long fpw(long long x, long long y, long long yeki)
 
 struct BigInt {
     std::vector<int> digits;
+    int sign;
+
+    BigInt()
+    {
+        sign = 1;
+    }
+
+    BigInt(long long int value)
+    {
+        *this = value;
+    }
+
+    BigInt(const std::string &str)
+    {
+        this->read(str);
+    }
+
+    // void read(const std::string &str)
+    // {
+    //     this->sign = 1;
+    //     digits.clear();
+
+    //     int position = 0;
+    // }
+
+    int size()
+    {
+        if(digits.empty()) return 0;
+        int ans=(digits.size()-1)*9;
+		int ca=digits.back();
+		while(ca)
+			ans++,ca/=10;
+		return ans;
+    }
 };
 
 /*
