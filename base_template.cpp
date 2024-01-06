@@ -27,6 +27,11 @@ long long fpw(long long x, long long y, long long yeki)
     return result;
 }
 
+/*
+  #######################   THE   BIG   INT   ##########################
+  ######################################################################
+*/
+
 struct BigInt
 {
     std::vector<int> digits;
@@ -84,7 +89,7 @@ struct BigInt
         *this = value;
     }
 
-    BigInt(const string &str)
+    BigInt(const std::string &str)
     {
         this->read(str);
     }
@@ -517,21 +522,52 @@ struct BigInt
 };
 
 /*
-
-Start your codes from below!!
-
+  #######################   THE   BIG   INT   ##########################
+  ######################################################################
 */
+
+/*
+  ######################################################################
+  ######################################################################
+  ######################################################################
+  ######################################################################
+  ######################################################################
+  ######################################################################
+  ######################################################################
+  ######################################################################
+  ######################################################################
+*/
+
+BigInt fin_(BigInt &start, BigInt &end, const BigInt &value)
+{
+    BigInt mid = (start + end) / 2;
+    if((((mid + 1) * (mid + 1)) > value) && ((mid * mid) <= value)) return mid;
+
+    if(value > mid) start = mid + 1;
+    else end = mid;
+
+    return fin_(start, end, value);
+}
 
 int main()
 {
-    ios::sync_with_stdio(false);
-    cin.tie(0);
-    cout.tie(0);
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(0);
+    std::cout.tie(0);
 
-    /*
+    // BigInt x;
+    // cin >> x;
+
+    // BigInt base = string("1");
+
+    // cout << fin_(base, x, x) << '\n';
+
+    BigInt x = string("123");
+    BigInt y = string("122");
+
+    cout << (x > y + 1) << ' ' << (x < y) << ' ' << (x >= y) << ' ' << (x <= y) << ' ' << (x == y) << ' ' << endl;
 
 
-     */
 
     return EXIT_SUCCESS;
 }
