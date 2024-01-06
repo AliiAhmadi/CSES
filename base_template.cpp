@@ -538,16 +538,7 @@ struct BigInt
   ######################################################################
 */
 
-BigInt fin_(BigInt &start, BigInt &end, const BigInt &value)
-{
-    BigInt mid = (start + end) / 2;
-    if((((mid + 1) * (mid + 1)) > value) && ((mid * mid) <= value)) return mid;
-
-    if(value > mid) start = mid + 1;
-    else end = mid;
-
-    return fin_(start, end, value);
-}
+typedef long long ll;
 
 int main()
 {
@@ -555,19 +546,7 @@ int main()
     std::cin.tie(0);
     std::cout.tie(0);
 
-    // BigInt x;
-    // cin >> x;
-
-    // BigInt base = string("1");
-
-    // cout << fin_(base, x, x) << '\n';
-
-    BigInt x = string("123");
-    BigInt y = string("122");
-
-    cout << (x > y + 1) << ' ' << (x < y) << ' ' << (x >= y) << ' ' << (x <= y) << ' ' << (x == y) << ' ' << endl;
-
-
+    
 
     return EXIT_SUCCESS;
 }
