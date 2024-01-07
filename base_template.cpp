@@ -540,7 +540,9 @@ struct BigInt
 
 typedef long long ll;
 
+const int MAX = 1e4;
 
+int arr[MAX];
 
 int main()
 {
