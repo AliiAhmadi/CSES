@@ -544,6 +544,8 @@ const int MAX = 1e4;
 
 int arr[MAX];
 
+map<string, int> mp;
+
 int main()
 {
     std::ios::sync_with_stdio(false);
