@@ -540,9 +540,11 @@ struct BigInt
 
 typedef long long ll;
 
-const int MAX = 1e4;
+const int MAX = 1e5;
 
-int arr[MAX];
+int x[MAX];
+int y[MAX];
+int s;
 
 map<string, int> mp;
 
