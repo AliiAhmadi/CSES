@@ -540,19 +540,16 @@ struct BigInt
 
 typedef long long ll;
 
-const int MAX = 1e5;
+const ll MAX = 1e7;
 
 int x[MAX];
 int y[MAX];
 int s;
-
-map<string, int> mp;
 
 int main()
 {
     std::ios::sync_with_stdio(false);
     std::cin.tie(0);
     std::cout.tie(0);
-
     return EXIT_SUCCESS;
 }
