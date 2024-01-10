@@ -541,7 +541,6 @@ struct BigInt
 typedef long long ll;
 
 const ll MAX = 1e7;
-
 int x[MAX];
 int y[MAX];
 int s;
