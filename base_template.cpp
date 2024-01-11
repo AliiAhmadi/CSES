@@ -546,6 +546,7 @@ int y[MAX];
 int s;
 ll n;
 
+bool can = true;
 int main()
 {
     std::ios::sync_with_stdio(false);
