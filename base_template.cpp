@@ -544,7 +544,7 @@ const ll MAX = 1e7;
 int x[MAX];
 int y[MAX];
 int s;
-int n;
+ll n;
 
 int main()
 {
