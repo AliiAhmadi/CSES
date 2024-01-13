@@ -545,6 +545,7 @@ int x[MAX];
 int y[MAX];
 int s;
 ll n;
+
 int main()
 {
     std::ios::sync_with_stdio(false);
