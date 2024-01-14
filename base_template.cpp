@@ -565,7 +565,7 @@ std::vector<int> PrimeFactors(long long int number)
 
 typedef long long ll;
 
-const ll MAX = 1e7;
+const ll MAX = 1e5;
 int x[MAX];
 int y[MAX];
 int s;
