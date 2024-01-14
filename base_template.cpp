@@ -521,6 +521,31 @@ struct BigInt
     }
 };
 
+std::vector<int> PrimeFactors(long long int number)
+{
+    std::vector<int> primes;
+
+    while (number % 2 == 0)
+    {
+        primes.push_back(2);
+        number /= 2;
+    }
+
+    for (int i = 3; i <= sqrt(number); i += 2)
+    {
+        while (number % i == 0)
+        {
+            primes.push_back(i);
+            number /= i;
+        }
+    }
+
+    if (number > 2)
+        primes.push_back(number);
+
+    return primes;
+}
+
 /*
   #######################   THE   BIG   INT   ##########################
   ######################################################################
