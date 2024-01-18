@@ -546,6 +546,20 @@ std::vector<int> PrimeFactors(long long int number)
     return primes;
 }
 
+long gcd(long first, long second)
+{
+    if (first == 0)
+        return second;
+    if (second == 0)
+        return first;
+    if (first == second)
+        return first;
+
+    if (first > second)
+        return gcd(first - second, second);
+    return gcd(first, second - first);
+}
+
 /*
   #######################   THE   BIG   INT   ##########################
   ######################################################################
@@ -576,6 +590,6 @@ int main()
     std::ios::sync_with_stdio(false);
     std::cin.tie(0);
     std::cout.tie(0);
-    
+
     return EXIT_SUCCESS;
 }
