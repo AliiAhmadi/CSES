@@ -585,11 +585,21 @@ int y[MAX];
 int s;
 ll n;
 
+void solve()
+{
+
+}
+
 int main()
 {
     std::ios::sync_with_stdio(false);
     std::cin.tie(0);
     std::cout.tie(0);
+
+    int n;
+    cin >> n;
+
+    while(n--) solve();
 
     return EXIT_SUCCESS;
 }
