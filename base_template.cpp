@@ -587,7 +587,6 @@ ll n;
 
 void solve()
 {
-
 }
 
 int main()
